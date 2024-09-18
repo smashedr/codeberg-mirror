@@ -16,7 +16,9 @@ jobs:
 
       - name: "Test Local Action"
         id: test
-        uses: ./.github/mirror-repository-action/
+        #uses: ./.github/mirror-repository-action/
+        #uses: ./.github/mirror-repository-action/
+        uses: smashedr/mirror-repository-action@master
         with:
           url: https://codeberg.org/shaner/codeberg-mirror
           #host: https://codeberg.org
