@@ -3,6 +3,8 @@ name: "Test"
 on:
   workflow_dispatch:
   push:
+    branches:
+      - master
 
 jobs:
   test:
@@ -16,15 +18,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "Test Local Action"
+      - name: "Mirror to Codeberg"
         id: test
-        #uses: ./.github/mirror-repository-action/
         #uses: ./.github/mirror-repository-action/
         uses: smashedr/mirror-repository-action@master
         with:
           url: https://codeberg.org/shaner/codeberg-mirror
           #host: https://codeberg.org
           #owner: shaner
-          #repo: private
+          #repo: codeberg-mirror
           username: shaner
           password: ${{ secrets.CODEBERG_TOKEN }}
