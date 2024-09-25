@@ -1,4 +1,4 @@
-name: "Test"
+name: "Mirror"
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: "Test"
+    name: "Mirror"
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
