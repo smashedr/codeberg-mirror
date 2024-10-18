@@ -2,11 +2,11 @@ name: "Mirror"
 
 on:
   workflow_dispatch:
+  release:
+    types: ["published"]
   push:
-    branches:
-      - "*"
-    tags:
-      - "*"
+    branches: ["**"]
+    tags: ["**"]
 
 jobs:
   mirror:
@@ -28,5 +28,6 @@ jobs:
           #host: https://codeberg.org
           #owner: shaner
           #repo: codeberg-mirror
+          create: true
           username: shaner
           password: ${{ secrets.CODEBERG_TOKEN }}
