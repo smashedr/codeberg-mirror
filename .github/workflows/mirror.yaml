@@ -22,7 +22,7 @@ jobs:
 
       - name: "Mirror to Codeberg"
         #uses: ./.github/mirror-repository-action/
-        uses: smashedr/mirror-repository-action@master
+        uses: cssnr/mirror-repository-action@fixes
         with:
           url: https://codeberg.org/shaner/codeberg-mirror
           #host: https://codeberg.org
